@@ -4,7 +4,7 @@ const resolvers = require("./resolvers")
 const db = require("./db")
 
 const server = new GraphQLServer({
-    typeDefs: path.resolve(__dirname, 'scheme.graphql'),
+    typeDefs: path.resolve(__dirname, 'schema.graphql'),
     resolvers
 })
 server.start();

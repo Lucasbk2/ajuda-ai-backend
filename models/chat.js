@@ -1,4 +1,5 @@
-const {Schema} = require("mongoose")
+const mongoose = require("mongoose")
+const {Schema} = mongoose 
 
 const message =  new Schema({
     id: Number, 
@@ -10,4 +11,4 @@ const chatSchema =  new Schema({
     messages: [message]
 })
 
-module.exports = chatSchema
+module.exports = mongoose.model("Chat", chatSchema);

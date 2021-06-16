@@ -1,10 +1,12 @@
-const {Schema} = require("mongoose")
+const mongoose = require("mongoose")
+const {Schema} = mongoose 
 
-const helpRegistry =  new Schema({
+
+const helpRegistrySchema =  new Schema({
     timestamp_finish: Number, 
     timestamp_initial: Number, 
-    id_provider: Number, 
-    id_requesting: Number, 
+    id_provider: String, 
+    id_requesting: String, 
     titulo: {type: String, max: 65}, 
     descricao: String, 
     color: String
@@ -12,4 +14,4 @@ const helpRegistry =  new Schema({
 
 
 
-module.exports = helpRegistry
+module.exports = mongoose.model("HelpRegistry", helpRegistrySchema); 

@@ -1,0 +1,35 @@
+type User {
+  id: ID!
+  name: String!,
+  number: String!, 
+  email: String,
+  avatar: String, 
+  username: String!, 
+  password: String!, 
+  chat_key: String,
+  star: Int
+}
+
+type Registry {
+  id: ID!
+  timestamp_finish: Int, 
+  timestamp_initial: Int!, 
+  id_provider: String, 
+  id_requesting: String!, 
+  titulo: String!, 
+  descricao: String!, 
+  color: String
+}
+
+
+type Query {
+  users: [User!]
+  user(id: ID!): User
+  registrys: [Registry!]
+  registry(id: ID!): Registry
+}
+
+type Mutation {
+  createUser(name: String!, email: String, number: String!, avatar: String, username: String!, password: String!, chat_key: String, star: Int): User
+  createRegistry(  timestamp_finish: Int, timestamp_initial: Int!, id_provider: String, id_requesting: String!, titulo: String!, descricao: String!, color: String): Registry
+}

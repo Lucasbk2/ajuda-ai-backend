@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 
-createModel('User', require('./models/user'));
-createModel('Chat', require('./models/chat'));
-createModel('HelpRegistry', require('./models/registry'));
+// const User = createModel('User', require('./models/user'));
+// const Chat = createModel('Chat', require('./models/chat'));
+// const HelpRegistry = createModel('HelpRegistry', require('./models/registry'));
 
 
 mongoose.connect("mongodb://localhost:27017", {
@@ -11,10 +11,7 @@ mongoose.connect("mongodb://localhost:27017", {
 })
 .catch(err => console.log(err)    )
 
-function createModel(nameModel,schema) {
-    mongoose.model(nameModel, schema);
-}
 
 module.exports = [  
-    createModel
+    
 ]
