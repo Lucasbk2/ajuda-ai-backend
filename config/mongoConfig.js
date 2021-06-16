@@ -1,2 +1,4 @@
-export default interface {
-  name: String
+// export default interface {
+//   name: String
+
+// }
