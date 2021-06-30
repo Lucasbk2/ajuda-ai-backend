@@ -1,13 +1,11 @@
-/*
 // const db = require("./db")
 const db = [
     {id: 1, name: "teste", email: "teste@gmaiteste.com"}
 ]
-*/
-const User = require('./models/user')
-const HelpRegistry = require('./models/registry')
+// const User = require('./models/user')
+// const HelpRegistry = require('./models/registry')
 
-module.exports = {
+/* module.exports = {
     Query: {
         users: () => User.find(),
         user: (root, { id }) => User.findById(id),
@@ -38,9 +36,8 @@ module.exports = {
             color
         })
     }
-}
+} */
 
-/*
 module.exports = {
     Query: {
         users: () => { return db },
@@ -54,4 +51,3 @@ module.exports = {
         },
     }
 }
-*/

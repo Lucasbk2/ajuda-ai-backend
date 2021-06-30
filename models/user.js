@@ -9,9 +9,10 @@ const userSchema = new Schema({
     username: String, 
     password: String, 
     chat_key: String,
+    lat: String,
+    lon: String,
     star: Number
 })
 
 
 module.exports = mongoose.model("User", userSchema);
-
