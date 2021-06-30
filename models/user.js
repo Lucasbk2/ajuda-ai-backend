@@ -8,7 +8,6 @@ const userSchema = new Schema({
     avatar: String, 
     username: String, 
     password: String, 
-    chat_key: String,
     lat: String,
     lon: String,
     star: Number

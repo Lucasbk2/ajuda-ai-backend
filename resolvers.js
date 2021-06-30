@@ -11,6 +11,7 @@ module.exports = {
     Query: {
         users: () => User.find(),
         user: (root, { id }) => User.findById(id),
+        userLogin: (root, { login, pass }) => User.find( { email: login, password: pass } ),
         registrys: () => HelpRegistry.find(),
         registry: () => (root, { id }) => HelpRegistry.findById(id)
 

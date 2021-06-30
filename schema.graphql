@@ -28,6 +28,7 @@ type Query {
   users: [User!]
   user(id: ID!): User
   registrys: [Registry!]
+  userLogin(login: String, pass: String): User
   registry(id: ID!): Registry
 }
 
