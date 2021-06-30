@@ -20,7 +20,13 @@ type Registry {
   id_requesting: String!, 
   titulo: String!, 
   descricao: String!, 
-  color: String
+  color: String,
+
+  latProvider: String,
+  lonProvider: String,
+
+  latRequesting: String,
+  lonRequesting: String,
 }
 
 
