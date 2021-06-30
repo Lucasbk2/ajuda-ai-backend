@@ -3,7 +3,9 @@ type User {
   name: String!,
   number: String!, 
   email: String,
-  avatar: String, 
+  avatar: String,
+  lat: String,
+  lon: String,
   username: String!, 
   password: String!, 
   chat_key: String,
@@ -18,7 +20,13 @@ type Registry {
   id_requesting: String!, 
   titulo: String!, 
   descricao: String!, 
-  color: String
+  color: String,
+
+  latProvider: String,
+  lonProvider: String,
+
+  latRequesting: String,
+  lonRequesting: String,
 }
 
 
@@ -26,6 +34,7 @@ type Query {
   users: [User!]
   user(id: ID!): User
   registrys: [Registry!]
+  userLogin(login: String, pass: String): User
   registry(id: ID!): Registry
 }
 
